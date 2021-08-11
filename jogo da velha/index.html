@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jogo da velha</title>
+    <link rel="shortcut icon" href="favicon.png" type="image/x-icon">
+    
+</head>
+<style>
+    :root{
+    --body: #fafafa;
+    --texto : black;
+}
+.dark-mode:root{
+    --body: black;
+    --texto: white;
+}
+body{
+    background-color: var(--body);
+}
+    .box{
+        width: 150px;
+        height: 150px;
+        background-color:var(--body);
+        
+    }
+    img{
+        width: 130px;
+        height: 130px;
+        margin-top: 10;
+        margin-left: 10px;
+        margin-top: 10px;
+    }
+    header{
+        text-align: center;
+        color: var(--texto);
+    }
+    header h1{
+        text-transform:uppercase;
+    }
+    header img{
+        width: 30px;
+        height: 30px;
+        margin-bottom: -10px;
+        margin-left: 10px;
+    }
+    main{
+        font-family:Arial, Helvetica, sans-serif;
+    }
+    section{
+    display: flex;
+        justify-content: center;
+    }
+    #linha1{
+        flex-wrap: wrap;
+    }
+    #linha2{
+        flex-wrap: wrap;
+    }
+    #linha3{
+        flex-wrap: wrap;
+    }
+    #a1{
+        border-right: 3px solid var(--texto);
+        border-bottom: 3px solid var(--texto);
+    }
+    #a2{
+        border-right: 3px solid var(--texto);
+        border-bottom: 3px solid var(--texto);
+    }
+    #a3{
+        border-right: 3px solid var(--texto);
+        
+    }
+    #b1{
+        border-right: 3px solid var(--texto);
+        border-bottom: 3px solid var(--texto);
+    }
+    #b2{
+        border-right: 3px solid var(--texto);
+        border-bottom: 3px solid var(--texto);
+    }
+    #b3{
+        border-right: 3px solid var(--texto);
+    }
+    
+    #c1{
+        
+        border-bottom: 3px solid var(--texto);
+    }
+    #c2{
+        
+        border-bottom: 3px solid var(--texto);
+    }
+    #c3{
+        
+    }
+    footer{
+        text-align: center;
+    }
+    
+</style>
+<body>
+    <main>
+        <header>
+            <h1>JOGO DA VELHA</h1>
+            <p>Turno do <img src="x.jpeg" alt="" id="turno"></p>
+        </header>
+        <section>
+            <div id="linha1">
+                <div id="a1" class="box">
+                    <img src="fundo-branco.png" alt="" id="img a1">
+                </div>
+                <div id="a2" class="box">
+                    <img src="fundo-branco.png" alt="" id="img a2">
+                </div>
+                <div id="a3" class="box">
+                    <img src="fundo-branco.png" alt="" id="img a3">
+                </div>
+            </div>
+            <div id="linha2">
+                <div id="b1" class="box">
+                    <img src="fundo-branco.png" alt="" id="img b1">
+                </div>
+                <div id="b2" class="box">
+                    <img src="fundo-branco.png" alt="" id="img b2">
+                </div>
+                <div id="b3" class="box">
+                    <img src="fundo-branco.png" alt="" id="img b3">
+                </div>
+            </div>
+            <div id="linha3">
+                <div id="c1" class="box">
+                    <img src="fundo-branco.png" alt="" id="img c1">
+                </div>
+                <div id="c2" class="box">
+                    <img src="fundo-branco.png" alt="" id="img c2">
+                </div>
+                <div id="c3" class="box">
+                    <img src="fundo-branco.png" alt="" id="img c3">
+                </div>
+            </div>
+        </section>
+        <footer>
+            <p id="resultado"></p>
+            <button id="restart">restart</button>
+        </footer>
+
+    </main>
+    <label for="switch">
+        <input type="checkbox"id="switch">Dark Mode
+    </label>
+    <script src="script.js"></script>
+</body>
+</html>
